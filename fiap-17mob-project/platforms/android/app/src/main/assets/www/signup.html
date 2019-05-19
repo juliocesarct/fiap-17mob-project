@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="./css/index.css">
+        <title>Cadastrar</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="container-fluid">
+                <br><br>
+                <h2>Cadastro de Usuário</h2>
+                <br>
+                <form id="createuser" style="text-align: center;" >
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nameCadastro" aria-describedby="nameHelp" placeholder="Digite seu nome *">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="emailCadastro" aria-describedby="emailHelp" placeholder="Digite o e-mail *">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="senhaCadastro" placeholder="Digite a senha *">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                    <br>
+                    <a href="login.html">Voltar para login</a>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/firebase.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
+        
+    </body>
+</html>

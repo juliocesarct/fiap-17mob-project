@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="./css/index.css">
+        <title>Perfil</title>
+    </head>
+    <body>
+        <div class="app">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">FIAP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <br><br>
+                <h2>Perfil do Usuário</h2>
+                <br>
+                <div style="text-align: center;">
+                    <br/><br/>
+                    <img src="https://placehold.it/100x100" alt=""/>
+                    <br/><br/>
+                </div>
+                <form id="createuser" style="text-align: center;" >
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nameCadastro" aria-describedby="nameHelp" placeholder="Digite seu nome *">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="emailCadastro" aria-describedby="emailHelp" placeholder="Digite o e-mail *">
+                    </div>            
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+                    <br>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/firebase.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
+        
+    </body>
+</html>
