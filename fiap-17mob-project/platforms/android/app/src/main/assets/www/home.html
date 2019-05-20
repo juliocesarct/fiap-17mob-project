@@ -59,13 +59,20 @@
                 </nav>
             <section id="home" style="text-align: center;">
 
-                <div id="pokemons"></div>
-                
+                <div class="container-fluid">
+                    <h2>Lista Pokemon</h2>
+                    <br/>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                            <lavel id="carregando" style="display: none">Carregando...</lavel>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="list-group" id="listaSW">
+                    </div>
+                </div>
             </section>
-
-            <footer>
-                <p>App Criado em Cordova por: <br />Julio C C Teixeira - RM332793 @ FIAP 2019</p>
-            </footer>
             
         </div>
 
@@ -76,6 +83,6 @@
         <script type="text/javascript" src="js/firebase.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/logout.js"></script>
-        
+        <script type="text/javascript" src="js/home.js"></script>
     </body>
 </html>
