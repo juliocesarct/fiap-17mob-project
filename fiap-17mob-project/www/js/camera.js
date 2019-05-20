@@ -6,21 +6,7 @@ var app = {
     }
 };
 
-document.getElementById('photo').addEventListener('click', () => {
-    let options = {
-        quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL,
-        encodingType: Camera.EncodingType.JPEG,
-        mediaType: Camera.MediaType.PICTURE,
-        targetWidth: 720,
-        correctOrientation: true,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-    }
-
-    takePicture(options)
-})
-
-document.getElementById('image').addEventListener('click', () => {
+document.getElementById('takephoto').addEventListener('click', () => {
     let options = {
         quality: 50,
         destinationType: Camera.DestinationType.DATA_URL,
