@@ -1,21 +1,33 @@
-class Pokemon{
-    constructor(name, image){
-      this.name = name;
-      this.image = image;
-    }
+var app = {
+  // Application Constructor
+  initialize: function() {
+      document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+  },
+
+  onDeviceReady: function() {
+      this.receivedEvent('deviceready');
+      isLogged()
+  },
+
+  // Update DOM on a Received Event
+  receivedEvent: function(id) {
+      var parentElement = document.getElementById(id);
+      var listeningElement = parentElement.querySelector('.listening');
+      var receivedElement = parentElement.querySelector('.received');
+
+      listeningElement.setAttribute('style', 'display:none;');
+      receivedElement.setAttribute('style', 'display:block;');
+
+      console.log('Received Event: ' + id);
   }
-  const $pokemons = $("#pokemons");
-  const addPokemon = (pokemon) => {
-    const img = $('<img>').attr('src', pokemon.image);
-    const pokm = $('<div>').addClass('pokemon').append(img);
-    $pokemons.append(pokm);
-  };
-  
-  
-  const baseURL = "https://pokeapi.co/api/v2/";
-  $.ajax({
-    url: baseURL + 'pokemon/1',
-    dataType:'json',
-  }).then(data => {
-    console.log(data);
-  }).catch( e  => console.log(e));
+};
+
+app.initialize;
+
+function isLogged(){
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+          window.location.href = "index.html"
+      }
+  });
+}

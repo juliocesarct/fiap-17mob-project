@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.fiap.julio"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.fiap.julio"
     }
   },
   "dependent_plugins": {}
