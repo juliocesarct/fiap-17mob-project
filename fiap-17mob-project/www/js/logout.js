@@ -1,17 +1,20 @@
-function logout(e){
-    firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    console.log("Logout successful");
-    $state.go("login.html");
-    }, function(error) {
-        // An error happened.
-        console.log(error);
-    });
-}
+var app = {
 
-var form = document.getElementById("sair");
-if (form.attachEvent) {
-    form.attachEvent("submit", logout);
-} else {
-    form.addEventListener("submit", logout);
-}
+    initialize: function () {
+        //document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+
+        document.getElementById('sair').addEventListener('click', () => {
+            firebase.auth().signOut().then(function () {
+                window.location = 'index.html'
+                console.log('deslogado')
+            }).catch(function (error) {
+                // An error happened.
+                console.log('erro ao deslogar')
+            });
+
+        })
+
+    },
+};
+
+app.initialize();    

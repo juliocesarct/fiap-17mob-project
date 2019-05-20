@@ -52,22 +52,27 @@
                                 <a class="nav-link" href="profile.html">Perfil</a>
                             </li>
                             <li class="nav-item">
-                                    <form id="sair"><a class="nav-link" href="#">Sair</a></form>
+                                    <form id="sair" type="submit"><a class="nav-link" href="#">Sair</a></form>
                             </li>
                         </ul>
                     </div>
                 </nav>
             <section id="home" style="text-align: center;">
 
-                <div id="pokemons"></div>
-
-                <form id="sair"><a href="#" id="logout">Sair</a></form>
-                
+                <div class="container-fluid">
+                    <h2>Lista Pokemon</h2>
+                    <br/>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">
+                            <lavel id="carregando" style="display: none">Carregando... </lavel>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="list-group" id="listaSW">
+                    </div>
+                </div>
             </section>
-
-            <footer>
-                <p>App Criado em Cordova por: <br />Julio C C Teixeira - RM332793 @ FIAP 2019</p>
-            </footer>
             
         </div>
 
@@ -78,6 +83,6 @@
         <script type="text/javascript" src="js/firebase.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/logout.js"></script>
-        
+        <script type="text/javascript" src="js/home.js"></script>
     </body>
 </html>

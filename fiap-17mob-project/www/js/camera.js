@@ -6,7 +6,7 @@ var app = {
     }
 };
 
-document.getElementById('gallery').addEventListener('click', () => {
+document.getElementById('photo').addEventListener('click', () => {
     let options = {
         quality: 50,
         destinationType: Camera.DestinationType.DATA_URL,
