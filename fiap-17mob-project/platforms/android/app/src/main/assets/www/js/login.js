@@ -35,7 +35,7 @@ function loginUser(e){
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function(success){
         console.log(success)
-        window.location.href = "index.html"
+        window.location.href = "home.html"
     })
     .catch(function(error) {
         // Handle Errors here.
@@ -59,7 +59,7 @@ if (form.attachEvent) {
 function isLogged(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            window.location.href = "index.html"
+            window.location.href = "home.html"
         }
     });
 }

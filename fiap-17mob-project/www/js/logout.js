@@ -9,7 +9,7 @@ function logout(e){
     });
 }
 
-var form = document.getElementById('sair');
+var form = document.getElementById("sair");
 if (form.attachEvent) {
     form.attachEvent("submit", logout);
 } else {
