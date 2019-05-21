@@ -6,18 +6,14 @@ var app = {
     }
 };
 
-document.getElementById('takephoto').addEventListener('click', () => {
-    let options = {
-        quality: 50,
+document.getElementById('takephoto').addEventListener('click', function(){
+    navigator.camera.getPicture(cbDataSuccess, cbDataError, {
+        sourceType: Camera.PictureSourceType.CAMERA,
         destinationType: Camera.DestinationType.DATA_URL,
-        encodingType: Camera.EncodingType.JPEG,
-        mediaType: Camera.MediaType.PICTURE,
-        targetWidth: 720,
         correctOrientation: true
-    }
-
-    takePicture(options)
-})
+      }
+    );
+  });
 
 var takePicture = (options) => {
     navigator.camera.getPicture((image_data) => {
